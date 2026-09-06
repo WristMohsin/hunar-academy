@@ -1,88 +1,219 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Hunar — Free Learning Academy</title>
-<meta name="description" content="100% free bilingual learning academy. Skill Up programs mapped to legal free resources."/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={theme:{extend:{colors:{ink:{DEFAULT:"#1c1914",soft:"#3d3a34",muted:"#6b6760"},paper:{DEFAULT:"#f4f1ea",card:"#faf8f4",soft:"#ebe7df"},teal:{DEFAULT:"#1a6b5c",light:"#2a8f7a",dark:"#124d42",soft:"#e8f5f1"},accent:{DEFAULT:"#c45c26",soft:"#fdf0e9"}},fontFamily:{display:['"Source Serif 4"',"Georgia","serif"],body:['"DM Sans"',"system-ui","sans-serif"]}}}}</script>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunar — Structured Free Learning for Career Skills</title>
+  <meta name="description" content="Hunar is a professional free learning platform. Structured curricula for web development, design, marketing, and more — built from official documentation and legal free resources. English and Roman Urdu." />
+  <meta name="theme-color" content="#0d7377" />
+  <meta property="og:title" content="Hunar — Structured Free Learning" />
+  <meta property="og:description" content="Career skills without paid courses. Official docs, free tools, and project-based paths." />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { DEFAULT: '#0f1419', soft: '#3d4450', muted: '#6b7280' },
+            paper: { DEFAULT: '#f8f7f4', card: '#ffffff', soft: '#f0eeea' },
+            teal: { DEFAULT: '#0d7377', light: '#14919b', dark: '#095456', soft: '#e6f4f4' },
+            accent: { DEFAULT: '#b45309', soft: '#fff7ed' }
+          },
+          fontFamily: {
+            display: ['"Source Serif 4"', 'Georgia', 'serif'],
+            body: ['"DM Sans"', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            card: '0 1px 2px rgb(15 20 25 / 0.04), 0 4px 16px rgb(15 20 25 / 0.04)',
+            'card-hover': '0 4px 24px rgb(15 20 25 / 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="bg-paper text-ink font-body antialiased min-h-screen">
-<header class="sticky top-0 z-50 border-b border-ink/10 bg-paper/95 backdrop-blur-md">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-<a href="index.html" class="flex items-center gap-2.5"><span class="w-9 h-9 rounded-lg bg-teal flex items-center justify-center text-paper font-display font-bold text-lg">H</span><span class="font-display font-semibold text-xl">Hunar</span></a>
-<nav class="hidden md:flex items-center gap-1">
-<a href="courses.html" class="nav-link">Courses</a>
-<a href="paths.html" class="nav-link">Learning Paths</a>
-<a href="dashboard.html" class="nav-link">Dashboard</a>
-<a href="about.html" class="nav-link">About</a>
-</nav>
-<div class="flex items-center gap-2">
-<button id="lang-toggle" class="btn-ghost text-sm font-medium px-3 py-1.5 rounded-md"><span data-lang-label>EN</span></button>
-<button id="theme-toggle" class="btn-ghost p-2 rounded-md" aria-label="Theme">
-<svg class="w-5 h-5 theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-<svg class="w-5 h-5 theme-icon-moon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-</button>
-<a href="courses.html" class="btn-primary hidden sm:inline-flex">Start Learning</a>
-<button id="mobile-menu-btn" class="md:hidden p-2 rounded-md btn-ghost" aria-label="Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-</div>
-</div>
-<div id="mobile-menu" class="hidden md:hidden border-t border-ink/10 bg-paper px-4 py-3 space-y-1">
-<a href="courses.html" class="block py-2.5 px-3">Courses</a>
-<a href="paths.html" class="block py-2.5 px-3">Paths</a>
-<a href="dashboard.html" class="block py-2.5 px-3">Dashboard</a>
-<a href="about.html" class="block py-2.5 px-3">About</a>
-</div>
-</header>
-<main>
-<section class="relative overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-teal-soft/40 via-transparent to-accent-soft/30 pointer-events-none"></div>
-<div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 relative">
-<div class="max-w-3xl">
-<p class="text-teal font-medium text-sm tracking-wide uppercase mb-4">100% Free · Legal Resources Only</p>
-<h1 class="font-display text-4xl sm:text-5xl font-bold leading-[1.15] tracking-tight mb-6">Master skills that get you hired — without paying for a course.</h1>
-<p class="text-lg text-ink-muted leading-relaxed mb-8 max-w-2xl">Hunar replaces paid bootcamps with structured free curricula: official docs, freeCodeCamp, YouTube educators, and real projects. English + Roman Urdu.</p>
-<div class="flex flex-wrap gap-3">
-<a href="courses.html" class="btn-primary text-base px-6 py-3">Browse Courses</a>
-<a href="paths.html" class="btn-secondary text-base px-6 py-3">View Learning Paths</a>
-</div>
-</div>
-</div>
-</section>
-<section class="border-t border-ink/8 bg-paper-card">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-<h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-2">Learning Paths</h2>
-<p class="text-ink-muted mb-10">Pick a track. Follow the roadmap. Build a portfolio.</p>
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="paths-grid"></div>
-</div>
-</section>
-<section class="border-t border-ink/8">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-<h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-2">Featured Courses</h2>
-<p class="text-ink-muted mb-10">Mapped from Skill Up programs — rebuilt with free, legal resources.</p>
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="featured-courses"></div>
-<p class="mt-6"><a href="courses.html" class="text-teal font-medium">All courses →</a></p>
-</div>
-</section>
-</main>
-<footer class="border-t border-ink/10 bg-paper-card">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 text-sm text-ink-muted">
-<p>© 2026 Hunar Free Academy. Built to replace paid courses with legal free learning.</p>
-</div>
-</footer>
-<script src="data/courses.js"></script>
-<script src="data/courses-1.js"></script>
-<script src="data/courses-2.js"></script>
-<script src="data/courses-3.js"></script>
-<script src="data/courses-4.js"></script>
-<script src="data/courses-5.js"></script>
-<script src="data/courses-6.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/store.js"></script>
-<script src="js/app.js"></script>
-<script>document.addEventListener("DOMContentLoaded",()=>HunarApp.initHome());</script>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-ink/10 bg-paper/90 backdrop-blur-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 group" aria-label="Hunar home">
+        <span class="w-9 h-9 rounded-xl bg-teal flex items-center justify-center text-white font-display font-bold text-lg shadow-sm group-hover:bg-teal-light transition-colors">H</span>
+        <span class="font-display font-semibold text-xl tracking-tight">Hunar</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-0.5" aria-label="Primary">
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="paths.html" class="nav-link">Paths</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <div class="flex items-center gap-1.5">
+        <button id="lang-toggle" class="btn-ghost text-sm font-medium px-3 py-1.5 rounded-lg" title="Language"><span data-lang-label>EN</span></button>
+        <button id="theme-toggle" class="btn-ghost p-2 rounded-lg" aria-label="Toggle theme">
+          <svg class="w-5 h-5 theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg class="w-5 h-5 theme-icon-moon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <a href="courses.html" class="btn-primary hidden sm:inline-flex ml-1">Start learning</a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg btn-ghost" aria-label="Open menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-ink/10 bg-paper px-4 py-3 space-y-0.5">
+      <a href="courses.html" class="block py-2.5 px-3 rounded-lg hover:bg-paper-soft">Courses</a>
+      <a href="paths.html" class="block py-2.5 px-3 rounded-lg hover:bg-paper-soft">Paths</a>
+      <a href="dashboard.html" class="block py-2.5 px-3 rounded-lg hover:bg-paper-soft">Dashboard</a>
+      <a href="about.html" class="block py-2.5 px-3 rounded-lg hover:bg-paper-soft">About</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-teal-soft/50 via-transparent to-transparent pointer-events-none"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-20 pb-16 sm:pt-28 sm:pb-24 relative">
+        <div class="max-w-2xl">
+          <p class="section-label mb-5">Free · Structured · Legal resources only</p>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.25rem] font-bold leading-[1.12] tracking-tight text-ink mb-6">
+            Career skills without the cost of a course.
+          </h1>
+          <p class="text-lg sm:text-xl text-ink-muted leading-relaxed mb-8 max-w-xl">
+            Hunar maps professional curricula to official documentation, free tools, and educator-published content. Learn web, design, marketing, and more — with quizzes, projects, and progress tracking.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-12">
+            <a href="courses.html" class="btn-primary text-[0.9375rem] px-6 py-3">Explore courses</a>
+            <a href="paths.html" class="btn-secondary text-[0.9375rem] px-6 py-3">View learning paths</a>
+          </div>
+          <div class="flex flex-wrap gap-x-8 gap-y-3">
+            <div class="trust-item"><span class="trust-dot"></span>10 structured tracks</div>
+            <div class="trust-item"><span class="trust-dot"></span>English & Roman Urdu</div>
+            <div class="trust-item"><span class="trust-dot"></span>No account required</div>
+            <div class="trust-item"><span class="trust-dot"></span>Progress saved locally</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value props -->
+    <section class="border-t border-ink/8 bg-paper-card">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="grid md:grid-cols-3 gap-8 md:gap-10">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-teal-soft flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-teal-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-lg mb-2">Curriculum-first</h3>
+            <p class="text-sm text-ink-muted leading-relaxed">Modules, lessons, exercises, quizzes, and capstones — not a random playlist. Clear outcomes at every step.</p>
+          </div>
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-teal-soft flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-teal-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-lg mb-2">Legal free sources</h3>
+            <p class="text-sm text-ink-muted leading-relaxed">MDN, freeCodeCamp, official product docs, free design tools, and publicly shared educator videos only. No piracy.</p>
+          </div>
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-teal-soft flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-teal-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            </div>
+            <h3 class="font-display font-semibold text-lg mb-2">Built for dual audiences</h3>
+            <p class="text-sm text-ink-muted leading-relaxed">Professional English for global learners, with natural Roman Urdu support for regional accessibility.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paths -->
+    <section class="border-t border-ink/8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+          <div>
+            <p class="section-label">Roadmaps</p>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight">Learning paths</h2>
+            <p class="text-ink-muted mt-2 max-w-lg">Ordered sequences from fundamentals to portfolio-ready work.</p>
+          </div>
+          <a href="paths.html" class="text-sm font-semibold text-teal hover:text-teal-light transition-colors shrink-0">View all paths →</a>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="paths-grid"></div>
+      </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="border-t border-ink/8 bg-paper-card">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+          <div>
+            <p class="section-label">Catalog</p>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight">Featured courses</h2>
+            <p class="text-ink-muted mt-2 max-w-lg">Each course includes lessons, free resource links, practice, and a capstone.</p>
+          </div>
+          <a href="courses.html" class="text-sm font-semibold text-teal hover:text-teal-light transition-colors shrink-0">Browse catalog →</a>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="featured-courses"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="border-t border-ink/8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div class="rounded-2xl bg-teal-dark text-white px-8 py-12 sm:px-12 sm:py-14 text-center">
+          <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-3">Start with one lesson today</h2>
+          <p class="text-white/80 max-w-xl mx-auto mb-8 text-[0.9375rem] leading-relaxed">
+            No signup. No payment wall. Choose a course, complete a lesson, and track progress in your browser.
+          </p>
+          <a href="courses.html" class="btn-primary bg-white text-teal-dark hover:bg-paper shadow-none">Open course catalog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-ink/10 bg-paper-card">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div class="flex flex-col md:flex-row md:items-start justify-between gap-8">
+        <div class="max-w-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-8 h-8 rounded-lg bg-teal flex items-center justify-center text-white font-display font-bold text-sm">H</span>
+            <span class="font-display font-semibold text-lg">Hunar</span>
+          </div>
+          <p class="text-sm text-ink-muted leading-relaxed">A free learning academy that structures career skills around legal, publicly available educational resources.</p>
+        </div>
+        <div class="flex flex-wrap gap-x-12 gap-y-6 text-sm">
+          <div>
+            <p class="font-semibold text-ink mb-2">Learn</p>
+            <ul class="space-y-1.5 text-ink-muted">
+              <li><a href="courses.html" class="hover:text-teal transition-colors">Courses</a></li>
+              <li><a href="paths.html" class="hover:text-teal transition-colors">Paths</a></li>
+              <li><a href="dashboard.html" class="hover:text-teal transition-colors">Dashboard</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold text-ink mb-2">Platform</p>
+            <ul class="space-y-1.5 text-ink-muted">
+              <li><a href="about.html" class="hover:text-teal transition-colors">About</a></li>
+              <li><span class="text-ink-muted/80">Progress is stored locally</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-ink/8 flex flex-col sm:flex-row justify-between gap-3 text-xs text-ink-muted">
+        <p>© 2026 Hunar. All curriculum links point to third-party free resources; Hunar does not host copyrighted paid courses.</p>
+        <p class="shrink-0">English · Roman Urdu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/courses.js"></script>
+  <script src="data/courses-1.js"></script>
+  <script src="data/courses-2.js"></script>
+  <script src="data/courses-3.js"></script>
+  <script src="data/courses-4.js"></script>
+  <script src="data/courses-5.js"></script>
+  <script src="data/courses-6.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => HunarApp.initHome());</script>
 </body>
 </html>
