@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Course Catalog — Hunar</title>
-  <meta name="description" content="Browse structured free courses in web development, design, marketing, games, and more." />
+  <title>Courses — Hunar</title>
+  <meta name="description" content="Explore 10 free career tracks with lessons, projects, and legal free resources." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={theme:{extend:{colors:{ink:{DEFAULT:'#0f1419',soft:'#3d4450',muted:'#6b7280'},paper:{DEFAULT:'#f8f7f4',card:'#ffffff',soft:'#f0eeea'},teal:{DEFAULT:'#0d7377',light:'#14919b',dark:'#095456',soft:'#e6f4f4'},accent:{DEFAULT:'#b45309',soft:'#fff7ed'}},fontFamily:{display:['\"Source Serif 4\"','Georgia','serif'],body:['\"DM Sans\"','system-ui','sans-serif']}}}}</script>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
@@ -36,11 +36,15 @@
       <a href="about.html" class="block py-2.5 px-3 rounded-lg hover:bg-paper-soft">About</a>
     </div>
   </header>
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 flex-1 w-full">
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-14 flex-1 w-full">
     <p class="section-label">Catalog</p>
-    <h1 class="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-3">All courses</h1>
-    <p class="text-ink-muted mb-8 max-w-2xl leading-relaxed">Structured programs mapped to official documentation, free tools, and publicly available educational content.</p>
-    <div class="flex flex-wrap gap-2 mb-10">
+    <h1 class="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-2">Explore career tracks</h1>
+    <p class="text-ink-muted mb-6 max-w-2xl">Each track includes lessons, free resources, practice, and a clear career outcome.</p>
+    <div class="flex flex-col sm:flex-row gap-3 sm:items-center mb-6">
+      <input id="course-search" type="search" placeholder="Search courses, skills…" class="w-full sm:max-w-xs px-4 py-2.5 rounded-xl border border-ink/10 bg-paper-card text-sm focus:outline-none focus:border-teal" />
+      <span id="catalog-count" class="text-xs text-ink-muted"></span>
+    </div>
+    <div class="flex flex-wrap gap-2 mb-8">
       <button data-filter="all" class="filter-chip active">All</button>
       <button data-filter="web" class="filter-chip">Web</button>
       <button data-filter="design" class="filter-chip">Design</button>
@@ -51,9 +55,9 @@
     <div id="courses-list" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
   </main>
   <footer class="border-t border-ink/10 bg-paper-card">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-ink-muted flex flex-col sm:flex-row justify-between gap-2">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-ink-muted flex justify-between">
       <p>© 2026 Hunar</p>
-      <p>Legal free resources only</p>
+      <a href="paths.html" class="text-teal font-medium">View roadmaps →</a>
     </div>
   </footer>
   <script src="data/courses.js"></script>
@@ -63,6 +67,7 @@
   <script src="data/courses-4.js"></script>
   <script src="data/courses-5.js"></script>
   <script src="data/courses-6.js"></script>
+  <script src="data/meta.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/store.js"></script>
   <script src="js/app.js"></script>
