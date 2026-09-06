@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Hunar Free Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{ink:{DEFAULT:'#1c1914',soft:'#3d3a34',muted:'#6b6760'},paper:{DEFAULT:'#f4f1ea',card:'#faf8f4',soft:'#ebe7df'},teal:{DEFAULT:'#1a6b5c',light:'#2a8f7a',dark:'#124d42',soft:'#e8f5f1'},accent:{DEFAULT:'#c45c26',soft:'#fdf0e9'}},fontFamily:{display:['"Source Serif 4"',"Georgia","serif"],body:['"DM Sans"',"system-ui","sans-serif"]}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-paper text-ink font-body antialiased min-h-screen">
+  <header class="sticky top-0 z-50 border-b border-ink/10 bg-paper/95 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5"><span class="w-9 h-9 rounded-lg bg-teal flex items-center justify-center text-paper font-display font-bold text-lg">H</span><span class="font-display font-semibold text-xl">Hunar</span></a>
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="paths.html" class="nav-link">Paths</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="about.html" class="nav-link text-teal">About</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="lang-toggle" class="btn-ghost text-sm font-medium px-3 py-1.5 rounded-md"><span data-lang-label>EN</span></button>
+        <button id="theme-toggle" class="btn-ghost p-2 rounded-md">
+          <svg class="w-5 h-5 theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg class="w-5 h-5 theme-icon-moon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md btn-ghost"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-ink/10 bg-paper px-4 py-3 space-y-1">
+      <a href="courses.html" class="block py-2.5 px-3">Courses</a>
+      <a href="paths.html" class="block py-2.5 px-3">Paths</a>
+      <a href="dashboard.html" class="block py-2.5 px-3">Dashboard</a>
+      <a href="about.html" class="block py-2.5 px-3">About</a>
+    </div>
+  </header>
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12 lesson-prose">
+    <h1 class="font-display text-3xl font-bold tracking-tight mb-6">About Hunar</h1>
+    <p><strong>Hunar</strong> (ہنر — skill) is a free learning academy built to replace paid Skill Up / Codiea-style programs with structured curricula that use only legal, free resources.</p>
+    <h2>What we map</h2>
+    <p>From the Skill Up Prospectus 2026 we extracted every major track — Web Development, UI/UX, Graphics, Content Writing, Digital Marketing, SEO, ASO, Unity 3D, 3D Modeling (Blender), Video Editing — and rebuilt each as a module/lesson path with:</p>
+    <ul>
+      <li>Official documentation (MDN, React, Laravel, Unity, Blender, Google Search Central…)</li>
+      <li>Free courses (freeCodeCamp, Google Digital Garage, HubSpot Academy, Unity Learn, Coursera audit where available)</li>
+      <li>Free tools (Figma, Photopea, Inkscape, DaVinci Resolve, GitHub Pages, Search Console)</li>
+      <li>Educator YouTube series that are freely published</li>
+    </ul>
+    <h2 id="resources">Resource policy</h2>
+    <p>We never recommend pirated courses, cracked software, leaked paid content, or unauthorized downloads. If a resource is not free and legal, it does not appear here.</p>
+    <h2>How progress works</h2>
+    <p>Progress is stored in your browser (localStorage). No account, no tracking server. Clear site data resets progress.</p>
+    <h2>Languages</h2>
+    <p>Toggle <strong>EN</strong> / Roman Urdu from the header. Lesson explanations and UI strings switch together.</p>
+    <p class="mt-10"><a href="courses.html" class="btn-primary">Start learning</a></p>
+  </main>
+  <script src="data/courses.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded',()=>HunarApp.initAbout());</script>
+</body>
+</html>
