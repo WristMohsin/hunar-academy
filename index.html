@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Hunar — Free Learning Academy</title>
+<meta name="description" content="100% free bilingual learning academy. Skill Up programs mapped to legal free resources."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={theme:{extend:{colors:{ink:{DEFAULT:"#1c1914",soft:"#3d3a34",muted:"#6b6760"},paper:{DEFAULT:"#f4f1ea",card:"#faf8f4",soft:"#ebe7df"},teal:{DEFAULT:"#1a6b5c",light:"#2a8f7a",dark:"#124d42",soft:"#e8f5f1"},accent:{DEFAULT:"#c45c26",soft:"#fdf0e9"}},fontFamily:{display:['"Source Serif 4"',"Georgia","serif"],body:['"DM Sans"',"system-ui","sans-serif"]}}}}</script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet"/>
@@ -14,15 +15,15 @@
 <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
 <a href="index.html" class="flex items-center gap-2.5"><span class="w-9 h-9 rounded-lg bg-teal flex items-center justify-center text-paper font-display font-bold text-lg">H</span><span class="font-display font-semibold text-xl">Hunar</span></a>
 <nav class="hidden md:flex items-center gap-1">
-<a href="courses.html" class="nav-link" data-i18n="nav.courses">Courses</a>
-<a href="paths.html" class="nav-link" data-i18n="nav.paths">Learning Paths</a>
-<a href="dashboard.html" class="nav-link" data-i18n="nav.dashboard">Dashboard</a>
-<a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+<a href="courses.html" class="nav-link">Courses</a>
+<a href="paths.html" class="nav-link">Learning Paths</a>
+<a href="dashboard.html" class="nav-link">Dashboard</a>
+<a href="about.html" class="nav-link">About</a>
 </nav>
 <div class="flex items-center gap-2">
 <button id="lang-toggle" class="btn-ghost text-sm font-medium px-3 py-1.5 rounded-md"><span data-lang-label>EN</span></button>
 <button id="theme-toggle" class="btn-ghost p-2 rounded-md" aria-label="Theme">
-<svg class="w-5 h-5 theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+<svg class="w-5 h-5 theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
 <svg class="w-5 h-5 theme-icon-moon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
 </button>
 <a href="courses.html" class="btn-primary hidden sm:inline-flex">Start Learning</a>
@@ -30,10 +31,10 @@
 </div>
 </div>
 <div id="mobile-menu" class="hidden md:hidden border-t border-ink/10 bg-paper px-4 py-3 space-y-1">
-<a href="courses.html" class="block py-2.5 px-3 rounded-md hover:bg-paper-soft">Courses</a>
-<a href="paths.html" class="block py-2.5 px-3 rounded-md hover:bg-paper-soft">Paths</a>
-<a href="dashboard.html" class="block py-2.5 px-3 rounded-md hover:bg-paper-soft">Dashboard</a>
-<a href="about.html" class="block py-2.5 px-3 rounded-md hover:bg-paper-soft">About</a>
+<a href="courses.html" class="block py-2.5 px-3">Courses</a>
+<a href="paths.html" class="block py-2.5 px-3">Paths</a>
+<a href="dashboard.html" class="block py-2.5 px-3">Dashboard</a>
+<a href="about.html" class="block py-2.5 px-3">About</a>
 </div>
 </header>
 <main>
@@ -41,37 +42,44 @@
 <div class="absolute inset-0 bg-gradient-to-br from-teal-soft/40 via-transparent to-accent-soft/30 pointer-events-none"></div>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 relative">
 <div class="max-w-3xl">
-<p class="text-teal font-medium text-sm tracking-wide uppercase mb-4" data-i18n="hero.badge">100% Free · Legal Resources Only</p>
-<h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-ink mb-6"><span data-i18n="hero.title">Master skills that get you hired — without paying for a course.</span></h1>
-<p class="text-lg sm:text-xl text-ink-muted leading-relaxed mb-8 max-w-2xl" data-i18n="hero.sub">Hunar replaces paid bootcamps with structured free curricula: official docs, freeCodeCamp, YouTube educators, and real projects. English + Roman Urdu.</p>
+<p class="text-teal font-medium text-sm tracking-wide uppercase mb-4">100% Free · Legal Resources Only</p>
+<h1 class="font-display text-4xl sm:text-5xl font-bold leading-[1.15] tracking-tight mb-6">Master skills that get you hired — without paying for a course.</h1>
+<p class="text-lg text-ink-muted leading-relaxed mb-8 max-w-2xl">Hunar replaces paid bootcamps with structured free curricula: official docs, freeCodeCamp, YouTube educators, and real projects. English + Roman Urdu.</p>
 <div class="flex flex-wrap gap-3">
-<a href="courses.html" class="btn-primary text-base px-6 py-3" data-i18n="hero.cta1">Browse Courses</a>
-<a href="paths.html" class="btn-secondary text-base px-6 py-3" data-i18n="hero.cta2">View Learning Paths</a>
+<a href="courses.html" class="btn-primary text-base px-6 py-3">Browse Courses</a>
+<a href="paths.html" class="btn-secondary text-base px-6 py-3">View Learning Paths</a>
 </div>
 </div>
 </div>
 </section>
 <section class="border-t border-ink/8 bg-paper-card">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-<h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-2" data-i18n="paths.title">Learning Paths</h2>
-<p class="text-ink-muted mb-10" data-i18n="paths.sub">Pick a track. Follow the roadmap. Build a portfolio.</p>
+<h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-2">Learning Paths</h2>
+<p class="text-ink-muted mb-10">Pick a track. Follow the roadmap. Build a portfolio.</p>
 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="paths-grid"></div>
 </div>
 </section>
 <section class="border-t border-ink/8">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-<h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-2" data-i18n="courses.title">Featured Courses</h2>
-<p class="text-ink-muted mb-10" data-i18n="courses.sub">Mapped from Skill Up programs — rebuilt with free, legal resources.</p>
+<h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-2">Featured Courses</h2>
+<p class="text-ink-muted mb-10">Mapped from Skill Up programs — rebuilt with free, legal resources.</p>
 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="featured-courses"></div>
+<p class="mt-6"><a href="courses.html" class="text-teal font-medium">All courses →</a></p>
 </div>
 </section>
 </main>
 <footer class="border-t border-ink/10 bg-paper-card">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 text-sm text-ink-muted">
-<p data-i18n="footer.copy">© 2026 Hunar Free Academy. Built to replace paid courses with legal free learning.</p>
+<p>© 2026 Hunar Free Academy. Built to replace paid courses with legal free learning.</p>
 </div>
 </footer>
 <script src="data/courses.js"></script>
+<script src="data/courses-1.js"></script>
+<script src="data/courses-2.js"></script>
+<script src="data/courses-3.js"></script>
+<script src="data/courses-4.js"></script>
+<script src="data/courses-5.js"></script>
+<script src="data/courses-6.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/store.js"></script>
 <script src="js/app.js"></script>
