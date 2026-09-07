@@ -30,10 +30,10 @@ var HUNAR_META = {
   },
   'graphics-design': {
     icon: '🖌️',
-    outcome: { en: 'Brand kit and social creative set', ur: 'Brand kit + social creatives' },
+    outcome: { en: 'Brand kit and store-ready creatives', ur: 'Brand kit + store creatives' },
     weeks: '4–6',
-    builds: { en: ['Clean poster redesign', 'Logo/wordmark', '3 social templates'], ur: ['Poster redesign', 'Logo', '3 social templates'] },
-    skills: ['Hierarchy', 'Typography', 'Photopea', 'Inkscape']
+    builds: { en: ['Clean poster redesign', 'Logo/wordmark', '3 social templates', 'Game/store screenshot mockup'], ur: ['Poster redesign', 'Logo', '3 social templates', 'Store screenshot mockup'] },
+    skills: ['Hierarchy', 'Typography', 'Photopea', 'Inkscape', 'Store visuals']
   },
   'unity-3d': {
     icon: '🎮',
@@ -62,6 +62,27 @@ var HUNAR_META = {
     weeks: '2–4',
     builds: { en: ['Keyword set', 'Listing copy', 'Screenshot plan'], ur: ['Keywords', 'Listing', 'Screenshots'] },
     skills: ['Keywords', 'Listings', 'Creatives']
+  },
+  'flutter-dev': {
+    icon: '📱',
+    outcome: { en: 'Cross-platform mobile app builder', ur: 'Cross-platform mobile app builder' },
+    weeks: '8–12',
+    builds: { en: ['Dart OOP models', 'Multi-screen Flutter UI', 'API-powered list app'], ur: ['Dart models', 'Flutter multi-screen', 'API list app'] },
+    skills: ['Dart', 'OOP', 'Flutter', 'Navigation', 'APIs']
+  },
+  'wordpress-dev': {
+    icon: '🌐',
+    outcome: { en: 'WordPress site builder for clients', ur: 'WordPress client site builder' },
+    weeks: '4–6',
+    builds: { en: ['Local WP install', 'Themed brochure site', 'Client handoff notes'], ur: ['Local WP', 'Brochure site', 'Handoff notes'] },
+    skills: ['WordPress', 'Themes', 'Plugins', 'Content']
+  },
+  'lead-generation': {
+    icon: '🎯',
+    outcome: { en: 'Lead gen practitioner with campaign skills', ur: 'Lead gen campaign skills' },
+    weeks: '3–5',
+    builds: { en: ['ICP one-pager', 'Campaign plan', 'Metrics definition'], ur: ['ICP one-pager', 'Campaign plan', 'Metrics'] },
+    skills: ['ICP', 'Funnels', 'CRM', 'Campaigns']
   },
   '3d-modeling': {
     icon: '🧊',
@@ -92,6 +113,10 @@ var HUNAR_PATH_STEPS = {
   'path-creative': {
     outcome: { en: 'Become a Creative Studio generalist', ur: 'Creative Studio generalist bano' },
     steps: ['Editing basics', 'Promo video', 'Graphics', 'Brand kit']
+  },
+  'path-mobile': {
+    outcome: { en: 'Build apps and client websites', ur: 'Apps aur client websites' },
+    steps: ['Dart/OOP', 'Flutter UI', 'APIs', 'WordPress', 'Client project']
   }
 };
 
