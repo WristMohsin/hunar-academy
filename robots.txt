@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wristmohsin.github.io/hunar-academy/sitemap.xml
