@@ -1,79 +1,57 @@
-# Hunar
+# Hunar — Free Learning Academy
 
-**Structured free learning for career skills.**
+**100% free replacement** for Skill Up by Codiea (Prospectus 2026) paid programs.
 
-Hunar is a static learning platform that organizes professional curricula around legal, publicly available resources — official documentation, free tools, and educator-published content. It is designed for learners and organizations that need clear roadmaps without paid course subscriptions.
+Live: [wristmohsin.github.io/hunar-academy](https://wristmohsin.github.io/hunar-academy)
 
-**Repository:** [github.com/WristMohsin/hunar-academy](https://github.com/WristMohsin/hunar-academy)  
-**Live site (after Pages is enabled):** [wristmohsin.github.io/hunar-academy](https://wristmohsin.github.io/hunar-academy/)
+Open `index.html` in a browser (or serve the folder with any static server). No build step, no backend, no paid APIs.
 
----
+## Courses (mapped from Skill Up)
 
-## Features
-
-- **Curriculum-first structure** — modules, lessons, exercises, quizzes, resource links, and capstones
-- **Bilingual interface** — professional English and Roman Urdu
-- **Progress tracking** — browser `localStorage` (no account or backend)
-- **Light / dark theme** — system-friendly presentation
-- **Responsive UI** — designed for desktop and mobile review
-- **Zero build step** — pure HTML, CSS, and JavaScript
-
----
-
-## Course catalog
-
-| Track | Primary free resources |
-|-------|------------------------|
-| Web Development Foundations | MDN, freeCodeCamp, React docs, GitHub Pages |
-| UI/UX Design | Figma, NN/g, Laws of UX |
-| Graphics Design | Photopea, Inkscape, Google Fonts |
-| Digital Marketing | Google Digital Garage, HubSpot Academy |
-| SEO | Google Search Central, Search Console, Lighthouse |
-| Content Writing | PlainLanguage.gov, Google helpful content guidance |
-| App Store Optimization | Play Console & App Store Connect help |
-| Unity 3D | Unity Learn, Unity Manual |
-| 3D Modeling | Blender.org and official manual |
+| Course | Free stack highlights |
+|--------|----------------------|
+| Web Development Foundations | MDN, freeCodeCamp, React.dev, GitHub Pages |
+| UI/UX Design Bootcamp | Figma free, Google UX (audit), NN/g, Laws of UX |
+| Graphics Design (incl. game/store screenshots) | Photopea, Inkscape, GIMP, Google Fonts |
+| Digital Marketing | Google Digital Garage, HubSpot Academy, GA4 |
+| SEO Specialist | Google Search Central, Search Console, Lighthouse |
+| Content Writing | PlainLanguage.gov, helpful content guidance |
+| ASO | Play Console & App Store Connect docs |
+| Unity 3D Game Dev | Unity Learn, Unity Manual, C# docs |
+| 3D Modeling (Blender) | Blender.org manual & tutorials |
 | Video Editing | DaVinci Resolve Free, Blackmagic training |
+| Flutter App Development | Flutter docs, Dart tour, Net Ninja free series |
+| WordPress Development | learn.wordpress.org |
+| Lead Generation | HubSpot Academy (free) |
 
-### Learning paths
+## Learning paths
 
-1. Full Web Developer  
-2. Product Designer (Graphics → UI/UX)  
-3. Growth & SEO Marketer  
-4. Indie Game Creator (Blender → Unity)  
-5. Creative Studio (Video + Graphics)
+- Full Web Developer
+- Product Designer (Graphics → UI/UX)
+- Growth & SEO Marketer (incl. Lead Gen, ASO, Content)
+- Indie Game Creator (Blender → Unity)
+- Creative Studio (Video + Graphics)
+- Mobile & CMS Builder (Flutter + WordPress)
 
----
+## Platform features
 
-## Local development
-
-```bash
-git clone https://github.com/WristMohsin/hunar-academy.git
-cd hunar-academy
-npx serve .
-# or: python3 -m http.server 8080
-```
-
-Open the printed local URL in a browser.
-
----
-
-## Deployment (GitHub Pages)
-
-1. Repository **Settings → Pages**
-2. **Source:** GitHub Actions
-3. Push to `main` (workflow: `.github/workflows/build.yml`)
-
----
+- Structured modules with explainers, curated free resources, exercises, quizzes
+- Progress tracking via `localStorage` (export/import JSON)
+- Streak and weekly activity on the Dashboard
+- Project Showcase via GitHub Issues
+- Community links (WhatsApp / Discord — replace invites when live)
+- Light / dark theme
+- English UI; Roman Urdu strings in curriculum data
+- Responsive editorial UI (ink / paper / teal)
 
 ## Resource policy
 
-Hunar links only to resources that are free to access without circumventing paywalls. It does **not** host or distribute pirated or leaked paid courses.
+Only official documentation, Creative Commons / free university material, free tooling, and freely published educator videos. **No piracy, no cracked courses, no leaked paid content.**
 
-Progress data is stored under the key `hunar-progress-v1` in the learner’s browser.
+## Progress & privacy
 
----
+All progress lives in the browser under key `hunar-progress-v1`. Clearing site data resets it.
 
-## License note
+## License
 
-Site code in this repository is available for the project owner’s use. Third-party documentation, videos, and tools remain under their respective licenses and terms of use.
+MIT for this site shell — see `LICENSE`. Third-party resources remain under their own licenses.
